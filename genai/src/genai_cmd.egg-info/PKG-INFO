@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: genai-cmd
+Version: 1.0.1
+Summary: HuggingFace Integration with Command Line
+Home-page: https://github.com/Solonce/genai
+Author: Solomon Ince
+Author-email: Solomon Ince <solomon@solonce.com>
+License: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests==2.31.0

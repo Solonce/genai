@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/genai/__init__.py
+src/genai/genai.py
+src/genai.egg-info/PKG-INFO
+src/genai.egg-info/SOURCES.txt
+src/genai.egg-info/dependency_links.txt
+src/genai.egg-info/top_level.txt
