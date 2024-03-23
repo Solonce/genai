@@ -29,8 +29,6 @@
 
 ## About The Project
 
-![Screen Shot](images/screenshot.png)
-
 This project is designed for fast and extremely lightweight AI inference when using a linux based machine right from the command line.
 
 Using the command 'genai', you will be brought into a shell that allows you to interact with an AI Assistant. It is designed to give as short an answer as possible while satisfying the question.
@@ -39,9 +37,9 @@ Using the command 'genai', you will be brought into a shell that allows you to i
 
 ## Built With
 
-HuggingFace Inference API - Allow for free AI Inference
+[HuggingFace Inference API](https://huggingface.co/docs/api-inference/en/index) - Allow for free AI Inference
 
-Mixtral-8x7B-Instruct-v0.1 - The Model
+[Mixtral-8x7B-Instruct-v0.1](https://huggingface.co/mistralai/Mixtral-8x7B-Instruct-v0.1) - The Model
 
 ## Getting Started
 
@@ -49,7 +47,7 @@ Getting started is very simple. All you need is to install 'genai-cmd' via pip, 
 
 ### Prerequisites
 
-You will need a HuggingFace API Key. HuggingFace API Keys are free, and the instructions for obtaining one can be found here.
+You will need a HuggingFace API Key. HuggingFace API Keys are free, and the instructions for obtaining one can be found [here.](https://huggingface.co/docs/api-inference/en/quicktour#get-your-api-token).
 
 ### Installation
 
