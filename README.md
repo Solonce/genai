@@ -1,5 +1,9 @@
 <br/>
 <p align="center">
+  <a href="https://github.com/Solonce/genai">
+    <img src="genai_logo.png" alt="Logo" width="400" height="320">
+  </a>
+  
   <h3 align="center">genai</h3>
 
   <p align="center">
