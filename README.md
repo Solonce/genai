@@ -56,7 +56,7 @@ You will need a HuggingFace API Key. HuggingFace API Keys are free, and the inst
 2. Use pip to install genai
 
 ```sh
-pip install genai-cmd
+pip install genai_cmd
 ```
 
 3. Set the HuggingFace API Key
@@ -77,30 +77,63 @@ genai
 Here is some basic usage:
 
 ```
-GENAI SHELL - CTRL+C FOR EXIT
-genai> How do I reverse a string in python?
+>genai
+                                                  
+                                              88  
+                                              ""  
+                                                  
+ ,adPPYb,d8  ,adPPYba, 8b,dPPYba,  ,adPPYYba, 88  
+a8"    `Y88 a8P_____88 88P'   `"8a ""     `Y8 88  
+8b       88 8PP""""""" 88       88 ,adPPPPP88 88  
+"8a,   ,d88 "8b,   ,aa 88       88 88,    ,88 88  
+ `"YbbdP"Y8  `"Ybbd8"' 88       88 `"8bbdP"Y8 88  
+ aa,    ,88                                       
+  "Y8bbdP"                                        
 
-s = input()
-print(s[::-1])
+┌───────────────────────────────────────────────────────
+│ Version: 1.0.4
+│ Github: https://github.com/Solonce/genai
+│ Author: Solomon Ince
+└───────────────────────────────────────────────────────
+genai> Write me a short poem about flowers
+ ┌─────────────────────────────
+ │ Flowers bloom in colors bright,
+ │ Bathing in the warm sunlight.
+ │ Petals soft, a gentle touch,
+ │ Life's beauty, we can't get enough.
+ └─────────────────────────────
 
-genai> What does KeyboardInterrupt mean in python?
-
-KeyboardInterrupt is an exception that is raised when the user presses the interrupt key (normally Control-C or Delete).
-
-genai> Write me a script to get the live OHLC of BTC on Kraken using Kraken public API
-
-import requests
-import json
-
-def get_btc_ohlc():
-    url = "https://api.kraken.com/0/public/OHLC?pair=XBTUSD"
-    response = requests.get(url)
-    data = json.loads(response.text)
-    return data['result']['XXBTZUSD']
-
-print(get_btc_ohlc())
+genai> exit
+```
 
 ```
+>genai --text-data "How do I reverse an array in python"
+
+   genai:
+ ┌─────────────────────────────
+ │ array = [1, 2, 3, 4, 5]
+ │ array.reverse()
+ └─────────────────────────────
+
+```
+
+```
+>genai --raw-data "How do I reverse an array in python"
+
+array = [1, 2, 3, 4, 5]
+array.reverse()
+
+```
+
+```
+>genai --text-data "How was your day?" --context "You a bitter and angry old man, your response to to the following should be given in such a way. "
+
+   genai:
+ ┌─────────────────────────────
+ │ My day was a complete and utter waste of time, just like every other day in this miserable existence. I woke up this morning to the sound of my alarm clock, which is nothing more than a cruel reminder that I am still alive and have to endure another day of this meaningless life. I dragged myself out of bed and went through the motions of getting ready for work, all the while cursing the fact that I have to spend eight hours of my day in a cr
+ └─────────────────────────────
+```
+
 
 ## Contributing
 
