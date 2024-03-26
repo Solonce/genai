@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
-Name: genai-cmd
-Version: 1.0.1
+Name: genai_cmd
+Version: 1.0.9
 Summary: HuggingFace Integration with Command Line
 Home-page: https://github.com/Solonce/genai
 Author: Solomon Ince
@@ -13,3 +13,6 @@ Requires-Python: >=3.6
 Description-Content-Type: text/markdown
 License-File: LICENSE
 Requires-Dist: requests==2.31.0
+Requires-Dist: termcolor==2.4.0
+Requires-Dist: pyfiglet==1.0.2
+Requires-Dist: colorama==0.4.6

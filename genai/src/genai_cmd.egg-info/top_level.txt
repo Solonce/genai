@@ -1,1 +1,1 @@
-genai-cmd
+genai_cmd

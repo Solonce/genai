@@ -2,10 +2,11 @@ LICENSE
 README.md
 pyproject.toml
 setup.cfg
-src/genai-cmd/__init__.py
-src/genai-cmd/genai-cmd.py
+src/genai_cmd/__init__.py
+src/genai_cmd/genai_cmd.py
 src/genai_cmd.egg-info/PKG-INFO
 src/genai_cmd.egg-info/SOURCES.txt
 src/genai_cmd.egg-info/dependency_links.txt
+src/genai_cmd.egg-info/entry_points.txt
 src/genai_cmd.egg-info/requires.txt
 src/genai_cmd.egg-info/top_level.txt

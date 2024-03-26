@@ -6,8 +6,8 @@ requires = [
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "genai-cmd"
-version = "1.0.1"
+name = "genai_cmd"
+version = "1.0.9"
 description = "HuggingFace Integration with Command Line"
 authors = [
     { name = "Solomon Ince", email = "solomon@solonce.com" }
@@ -22,5 +22,11 @@ classifiers = [
 ]
 
 dependencies = [
-    "requests==2.31.0"
+    "requests==2.31.0",
+    "termcolor==2.4.0",
+    "pyfiglet==1.0.2",
+    "colorama==0.4.6"
 ]
+
+[project.scripts]
+genai = "genai_cmd:start"

@@ -1,0 +1,2 @@
+[console_scripts]
+genai = genai_cmd:start

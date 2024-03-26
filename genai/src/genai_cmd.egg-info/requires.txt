@@ -1,1 +1,4 @@
 requests==2.31.0
+termcolor==2.4.0
+pyfiglet==1.0.2
+colorama==0.4.6
