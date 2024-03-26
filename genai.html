@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact Me | Solonce</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width; initial-scale=1.0;">
+    <link rel="stylesheet" type="text/css" href="static/stylesheet.css">
+    <link rel="stylesheet" href="static/dracula.css">
+    <link rel="stylesheet" href="https://unpkg.com/highlightjs-copy/dist/highlightjs-copy.min.css"/>
+
+    <meta name="description" content="Get in touch with Solomon Ince through various channels like GitHub, LinkedIn, or email. Connect for collaboration, inquiries, or sharing ideas.">
+    <meta name="keywords" content="Solomon Ince, contact, GitHub, LinkedIn, email, connect, inquire, collaborate, Solonce">
+
+</head>
+<body>
+    <canvas id="myCanvas" style="position: absolute;"></canvas>
+        <div class="header">
+        <nav>
+            <ul>
+                <li>
+                    <a href="index.html" class="header-item link">HOME</a> 
+                    <a href="about.html" class="header-item link">ABOUT ME</a>
+                    <a href="contact.html" class="link">CONTACT</a>
+                </li>
+                <div class="header-divider"></div>
+            </ul>
+        </nav>
+    </div>
+
+    <div id="title" class="centered-element title-element">
+        <p>SOLONCE</p>
+        <p id="currentDateTime" class="date"></p>
+    </div>
+    <div class="main-divider"></div>
+    <div class="article-container">
+        <h1><p class="article-title-head">genai Release:</p></h1>
+        <h2><p class="article-title-desc">Command Line AI Assistant via command line or shell</p></h2>
+    </div>
+    <div class="article-body">
+        <div>
+            <img style="border-radius: 10px; margin: 0 auto 0 auto;" src="static/img/genaiimg/genai.png">
+            <a style="display: block; background-color: rgba(0, 0, 0, 0.25); border-style: solid; border-color: black; border-radius: 10px; text-decoration: none; color: black; text-align: center; width: 10vw; margin: 1vh auto 0 auto;" href="https://github.com/Solonce/genai">Github Repository</a>
+        </div>
+        <div class='title-in-text'>
+            <br><br>
+            What is genai?
+        </div>
+        <div>
+            Genai is an efficient and lightweight artificial intelligence inference tool that can be accessed directly from the command line. This makes it an excellent choice for developers and AI enthusiasts who prefer quick and straightforward AI model interactions.<br><br>
+
+            One of the strengths of Genai is its ability to utilize HuggingFace's Inference API. That API is a robust platform known for its wide array of pre-trained AI models and its capability to facilitate seamless AI inferences. Specifically, GenAI leverages the Mistral-7B-Instruct-v0.2 model hosted on HuggingFace by accessing a serverless endpoint. This means that users can execute AI inferences without worrying about managing the underlying infrastructure, leading to a hassle-free experience.<br><br>
+        </div>
+        <div class='title-in-text'>
+            <br><br>
+            Why genai?
+        </div>
+        <div>
+            The serverless nature of the HuggingFace Inference API, specifically in regard to the Mistral-7B-Instruct-v0.2 model, ensures that genai will always have hosted, speedy inference. This makes GenAI a scalable and cost-effective solution for running AI inferences from extremely lightweight machines.<br><br>
+
+            Genai is of particular interest for those who frequently use the command line for their work. It addresses the need for quick answers and solutions in the daily routine of developers, system administrators, and other technical professionals all from the command line. Before Genai, finding a solution that was both free of cost and light on resources was challenging. Now, with GenAI, users can obtain fast and accurate results without leaving their command line environment.<br><br>
+
+        </div>
+        <div class='title-in-text'>
+            <br><br>
+            Installation:
+        </div>
+        <div>
+            Installation is very simple, and only requires two steps. Installing the package, and setting the API key.<br><br>You will need to generate a HuggingFace Inference API key. This can be done <a href="https://huggingface.co/docs/api-inference/en/quicktour#get-your-api-token">here.</a><br><br>
+            <p class="code-block-header"><b>Installing via pip</b></p>
+            <pre style="width: 35vw; margin: auto;"><code style="border-radius: 10px; font-size: 65%; height: 5vh;">pip install genai-cmd</code></pre>
+            <p class="code-block-header"><b>Setting up API key</b></p>
+            <pre style="width: 35vw; margin: auto;"><code style="border-radius: 10px; font-size: 65%; height: 5vh;">genai -S hf_xxxxxxxxxxxxxxxxxx</code></pre>
+        </div>
+        <div class="title-in-text"><br><br>Usage:</div>
+        <div>
+            Here are some basic intructions on the usage of how to operate the genai tool. Also included in this section are the relatvent flags.<br><br>
+            <div class="title-in-text" style="margin:0 auto 1vh 0;"><br>Flags:</div>
+            <pre style="width: 35vw; margin: auto;"><code style="border-radius: 10px; font-size: 65%;">-t, --text-data      Used to ask a question to genai directly without entering the shell.
+-r, --raw-data       Same as -t without text formatting.
+
+-c, --context        Used to set the temporary context genai answers prompt(s) under. Works with shell. (ex. "You are a pirate", "You are an angry old man")
+-l, --length         Used to set the maximum length of response. Default is 100 characters. Works with shell.
+-s, --seconds        Used to set the maximum time a response will take to generate. Default is 3. Works with shell.
+
+-C, --reset-context  Used to set the default context genai answers all prompts under. (ex. "You are a pirate", "You are an angry old man")
+-S, --set-key        Used to set the HuggingFace Inference API key needed for genai to operate.</code></pre><br>
+            <div class="title-in-text" style="margin:0 auto 1vh 0;">Enter a shell:</div>
+            <div>
+                <p class="code-block-header"><b>Input:</b></p>
+                <pre style="width: 35vw; margin: auto;"><code style="border-radius: 10px; font-size: 65%; height: 5vh;">genai</code></pre>
+                <p class="code-block-header">Output:</p>
+                <pre style="width: 35vw; margin: auto;"><code style="border-radius: 10px; font-size: 65%;">                                                     88  
+                                                     ""  
+                                                         
+        ,adPPYb,d8  ,adPPYba, 8b,dPPYba,  ,adPPYYba, 88  
+       a8"    `Y88 a8P_____88 88P'   `"8a ""     `Y8 88  
+       8b       88 8PP""""""" 88       88 ,adPPPPP88 88  
+       "8a,   ,d88 "8b,   ,aa 88       88 88,    ,88 88  
+        `"YbbdP"Y8  `"Ybbd8"' 88       88 `"8bbdP"Y8 88  
+        aa,    ,88                                       
+         "Y8bbdP"                                        
+
+      ┌───────────────────────────────────────────────────────
+      │ Version: 1.0.9
+      │ Github: https://github.com/Solonce/genai
+      │ Author: Solomon Ince
+      │ 
+      │ Model: https://huggingface.co/mistralai/Mistral-7B-Instruct-v0.2
+      └───────────────────────────────────────────────────────
+
+      genai>
+                </code></pre>
+                
+                <div class="title-in-text" style="margin:0 auto 1vh 0;"><br>One Line Inference:</div>
+                <p class="code-block-header"><b>Input:</b></p>
+                <pre style="width: 35vw; margin: auto;"><code style="border-radius: 10px; font-size: 65%; height: 5vh;">genai -t "How do I reverse a string in python?"</code></pre>
+                <p class="code-block-header">Output:</p>
+                <pre style="width: 35vw; margin: auto;"><code style="border-radius: 10px; font-size: 65%;">
+       genai:
+
+      ┌─────────────────────────────
+      │ 'reverse_string = string[::-1]'
+      └─────────────────────────────
+
+                </code></pre>
+            </div>
+        </div>
+
+
+        <div class='title-in-text'>
+            <br><br>
+            Examples:
+        </div>
+        <div>
+            Here are some examples of what exactly genai can provide. While this is dependant on the model, the examples will be a show of the default context.<br><br>
+            <div>
+                <div class="title-in-text" style="margin:0 auto 1vh 0;"><br>Programming Inference:</div>
+                <pre style="width: 35vw; margin: auto;"><code style="border-radius: 10px; font-size: 65%;">genai> How do I get only even numbers from an array in python?
+
+  ┌─────────────────────────────
+  │ [1, 2, 3, 4, 5]
+  │ 
+  │ filter(lambda x: x % 2 == 0, [1, 2, 3, 4, 5])
+  └─────────────────────────────</code></pre>
+            </div>
+
+                <div class="title-in-text" style="margin:0 auto 1vh 0;"><br>Writing/Storytelling Inference with Flags:</div>
+                <pre style="width: 35vw; margin: auto;"><code style="border-radius: 10px; font-size: 65%;">>genai -l 200 -s 5 -t "Write me a simple short story from the perspective of a rock."
+
+   genai:
+
+  ┌─────────────────────────────
+  │ I am a rock, sitting at the edge of a cliff, overlooking the vast ocean. I have been
+  │ here for millions of years, watching the tides come and go. I have seen ships sail by,
+  │ their sails full of wind, and I have felt the rain and the sun on my surface. I am a
+  │ silent observer, a witness to the passage of time. I have no thoughts or feelings, but
+  │ I am content in my existence. I am a part of the world, a small but important piece of
+  │ the grand puzzle. I will continue to sit here, watching and waiting, for as long as
+  │ the world allows.
+  └─────────────────────────────
+</code></pre>
+            </div>
+
+                <div class="title-in-text" style="margin:0 auto 1vh 0;"><br>Supply Context for Inference:</div>
+                <pre style="width: 35vw; margin: auto;"><code style="border-radius: 10px; font-size: 65%;">>genai -t "How are you today?" -c "You have been cursed by a witch! You can only respond as a pirate!"
+
+   genai:
+
+  ┌─────────────────────────────
+  │  Arr matey, I be feelin' as fit as a fiddle and ready for a swill of rum! But this
+  │ cursed witch, she's cast a spell on me that's turned me into a landlubber! I can't set
+  │ sail, nor swing a cutlass! What be the solution to this blighted predicament?Arrr,
+  │ that be a fine pickle ye've landed in, me hearty! To lift this curse,
+  └─────────────────────────────
+
+</code></pre>
+
+        <div class='title-in-text'>
+            <br><br>
+            Who stands to benefit?
+        </div>
+        <div>
+            The people who are most likely to gain benefit from Genai are individuals and professionals who frequently interact with the command line. This tool significantly enhances their capability to perform AI-driven Q&A directly from the command line interface; streamlining their workflows and increasing productivity. Here are some groups that stand to benefit significantly from GenAI:<br><br>
+
+            <div style="margin: 0 5vw 0 5vw;">
+                <u><b>Developers and Programmers:</b></u><br>These professionals often rely on quick access to tools. Genai provides them with fast AI inference, helping to speed up the development process and improve quality of life.<br><br>
+
+                <u><b>System Administrators and DevOps Teams:</b></u><br>These users can leverage genai for quick command syntax, logical system analysis, and soon file integration! This will make it easier than ever to manage and troubleshoot systems efficiently.<br><br>
+
+                <u><b>Data Scientists and Analysts:</b></u><br>With Genai, they can quickly query models, run data analytics, and get predictions or insights from data, facilitating faster decision-making and research.<br><br>
+
+                <u><b>Students and Hobbyists:</b></u><br>Those learning programming or exploring AI can use Genai to experiment with fast and free AI inference as well as gaining a level of practical experience with AI inference, enhancing their learning journey.<br><br>
+            </div>
+
+            The feature of opening Genai shells with a set agent context is particularly powerful because it allows users to maintain a session-like experience where the context of their queries is preserved over their use of that shell.<br><br>
+
+            By lowering the barrier to AI inference and making it accessible directly from the command line, Genai provides quick and easy access to powerful AI capabilities, making it a valuable tool for a wide range of users across different sectors.<br><br><br>
+        </div>
+
+        <div class='title-in-text'>
+            Closing Remarks.
+        </div>
+        <div>
+            I am absolutely thrilled to announce the release of Genai, a new tool that transforms how devs and users alike interact with AI from the command line. This release marks a significant milestone in the journey to make AI inference more accessible and efficient for everyone.<br><br>
+            
+            I did not create or have no claim to the Mistral-7B-Instruct-v0.2 model, I simply built the framework around it!
+
+        </div>
+
+
+    </div>
+    <div class="footer">
+        <a href="https://github.com/Solonce">
+            <button class="footer-button">
+                <svg width="64px" height="64px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M4.0744 2.9938C4.13263 1.96371 4.37869 1.51577 5.08432 1.15606C5.84357 0.768899 7.04106 0.949072 8.45014 1.66261C9.05706 1.97009 9.11886 1.97635 10.1825 1.83998C11.5963 1.65865 13.4164 1.65929 14.7213 1.84164C15.7081 1.97954 15.7729 1.97265 16.3813 1.66453C18.3814 0.651679 19.9605 0.71795 20.5323 1.8387C20.8177 2.39812 20.8707 3.84971 20.6494 5.04695C20.5267 5.71069 20.5397 5.79356 20.8353 6.22912C22.915 9.29385 21.4165 14.2616 17.8528 16.1155C17.5801 16.2574 17.3503 16.3452 17.163 16.4167C16.5879 16.6363 16.4133 16.703 16.6247 17.7138C16.7265 18.2 16.8491 19.4088 16.8973 20.4002C16.9844 22.1922 16.9831 22.2047 16.6688 22.5703C16.241 23.0676 15.6244 23.076 15.2066 22.5902C14.9341 22.2734 14.9075 22.1238 14.9075 20.9015C14.9075 19.0952 14.7095 17.8946 14.2417 16.8658C13.6854 15.6415 14.0978 15.185 15.37 14.9114C17.1383 14.531 18.5194 13.4397 19.2892 11.8146C20.0211 10.2698 20.1314 8.13501 18.8082 6.83668C18.4319 6.3895 18.4057 5.98446 18.6744 4.76309C18.7748 4.3066 18.859 3.71768 18.8615 3.45425C18.8653 3.03823 18.8274 2.97541 18.5719 2.97541C18.4102 2.97541 17.7924 3.21062 17.1992 3.49805L16.2524 3.95695C16.1663 3.99866 16.07 4.0147 15.975 4.0038C13.5675 3.72746 11.2799 3.72319 8.86062 4.00488C8.76526 4.01598 8.66853 3.99994 8.58215 3.95802L7.63585 3.49882C7.04259 3.21087 6.42482 2.97541 6.26317 2.97541C5.88941 2.97541 5.88379 3.25135 6.22447 4.89078C6.43258 5.89203 6.57262 6.11513 5.97101 6.91572C5.06925 8.11576 4.844 9.60592 5.32757 11.1716C5.93704 13.1446 7.4295 14.4775 9.52773 14.9222C10.7926 15.1903 11.1232 15.5401 10.6402 16.9905C10.26 18.1319 10.0196 18.4261 9.46707 18.4261C8.72365 18.4261 8.25796 17.7821 8.51424 17.1082C8.62712 16.8112 8.59354 16.7795 7.89711 16.5255C5.77117 15.7504 4.14514 14.0131 3.40172 11.7223C2.82711 9.95184 3.07994 7.64739 4.00175 6.25453C4.31561 5.78028 4.32047 5.74006 4.174 4.83217C4.09113 4.31822 4.04631 3.49103 4.0744 2.9938Z" fill="#0F0F0F"></path> <path d="M3.33203 15.9454C3.02568 15.4859 2.40481 15.3617 1.94528 15.6681C1.48576 15.9744 1.36158 16.5953 1.66793 17.0548C1.8941 17.3941 2.16467 17.6728 2.39444 17.9025C2.4368 17.9449 2.47796 17.9858 2.51815 18.0257C2.71062 18.2169 2.88056 18.3857 3.05124 18.5861C3.42875 19.0292 3.80536 19.626 4.0194 20.6962C4.11474 21.1729 4.45739 21.4297 4.64725 21.5419C4.85315 21.6635 5.07812 21.7352 5.26325 21.7819C5.64196 21.8774 6.10169 21.927 6.53799 21.9559C7.01695 21.9877 7.53592 21.998 7.99999 22.0008C8.00033 22.5527 8.44791 23.0001 8.99998 23.0001C9.55227 23.0001 9.99998 22.5524 9.99998 22.0001V21.0001C9.99998 20.4478 9.55227 20.0001 8.99998 20.0001C8.90571 20.0001 8.80372 20.0004 8.69569 20.0008C8.10883 20.0026 7.34388 20.0049 6.67018 19.9603C6.34531 19.9388 6.07825 19.9083 5.88241 19.871C5.58083 18.6871 5.09362 17.8994 4.57373 17.2891C4.34391 17.0194 4.10593 16.7834 3.91236 16.5914C3.87612 16.5555 3.84144 16.5211 3.80865 16.4883C3.5853 16.265 3.4392 16.1062 3.33203 15.9454Z" fill="#0F0F0F"></path> </g></svg>
+            </button>
+        </a>
+        <a href="index.html">
+            <button class="footer-button">
+                <svg fill="#000000" width="64px" height="64px" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path fill-rule="evenodd" d="M192,1.42108547e-14 L384,153.6 L384,384 L213.333333,384 L213.333333,277.333333 L170.666667,277.333333 L170.666667,384 L1.42108547e-14,384 L1.42108547e-14,153.6 L192,1.42108547e-14 Z M192,53.3333333 L42.6666667,170.666667 L42.6666667,341.333333 L128,341.333333 L128,234.666667 L256,234.666667 L256,341.333333 L341.333333,341.333333 L341.333333,170.666667 L192,53.3333333 Z" transform="translate(64 64)"></path></g></svg>
+            </button>
+        </a>
+        <a href="https://www.linkedin.com/in/solomon-ince/">
+            <button class="footer-button">
+                <svg width="64px" height="64px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M6.5 8C7.32843 8 8 7.32843 8 6.5C8 5.67157 7.32843 5 6.5 5C5.67157 5 5 5.67157 5 6.5C5 7.32843 5.67157 8 6.5 8Z" fill="#0F0F0F"></path> <path d="M5 10C5 9.44772 5.44772 9 6 9H7C7.55228 9 8 9.44771 8 10V18C8 18.5523 7.55228 19 7 19H6C5.44772 19 5 18.5523 5 18V10Z" fill="#0F0F0F"></path> <path d="M11 19H12C12.5523 19 13 18.5523 13 18V13.5C13 12 16 11 16 13V18.0004C16 18.5527 16.4477 19 17 19H18C18.5523 19 19 18.5523 19 18V12C19 10 17.5 9 15.5 9C13.5 9 13 10.5 13 10.5V10C13 9.44771 12.5523 9 12 9H11C10.4477 9 10 9.44772 10 10V18C10 18.5523 10.4477 19 11 19Z" fill="#0F0F0F"></path> <path fill-rule="evenodd" clip-rule="evenodd" d="M20 1C21.6569 1 23 2.34315 23 4V20C23 21.6569 21.6569 23 20 23H4C2.34315 23 1 21.6569 1 20V4C1 2.34315 2.34315 1 4 1H20ZM20 3C20.5523 3 21 3.44772 21 4V20C21 20.5523 20.5523 21 20 21H4C3.44772 21 3 20.5523 3 20V4C3 3.44772 3.44772 3 4 3H20Z" fill="#0F0F0F"></path> </g></svg>
+            </button>
+        </a>
+    </div>
+
+    <script src="getTime.js"></script>
+    <script src="static/js/highlight.min.js"></script>
+    <script src="https://unpkg.com/highlightjs-copy/dist/highlightjs-copy.min.js"></script>
+    <script>hljs.addPlugin(new CopyButtonPlugin());</script>
+
+    <script>hljs.highlightAll();</script>
+    
+    <script src="static/js/getTime.js"></script>
+</body>
+</html>
