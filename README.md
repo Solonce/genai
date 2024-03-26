@@ -39,7 +39,7 @@ Using the command 'genai', you will be brought into a shell that allows you to i
 
 - Shell support: Open a shell to pass multiple prompts to genai.
 - No shell/One-liner support: Use the -t flag to ask genai a single prompt without entering a shell
-- Context Operation: Genai runs under a given context so it knows how to format the response. Change it for a single shell instance or reset the default context to something custom. The default context is [here](https://github.com/Solonce/genai/default_context.txt).
+- Context Operation: Genai runs under a given context so it knows how to format the response. Change it for a single shell instance or reset the default context to something custom. The default context is [here](https://github.com/Solonce/genai/blob/main/default_context.txt).
 - Fast & Custom: Genai defaults to a lightweight 100 character response, with a maximum 3 second load time. These are variable with the correct flags if you need longer responses! 
 
 
