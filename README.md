@@ -22,7 +22,9 @@
 * [Getting Started](#getting-started)
   * [Prerequisites](#prerequisites)
   * [Installation](#installation)
-* [Usage](#usage)
+* [Flags](#flags)
+* [Examples](#examples)
+* [Limitations](#limitations)
 * [Contributing](#contributing)
 * [License](#license)
 * [Authors](#authors)
@@ -33,13 +35,19 @@ This project is designed for fast and extremely lightweight AI inference when us
 
 Using the command 'genai', you will be brought into a shell that allows you to interact with an AI Assistant. It is designed to give as short an answer as possible while satisfying the question.
 
+### Cool Features!
+
+- Shell support: Open a shell to pass multiple prompts to genai.
+- No shell/One-liner support: Use the -t flag to ask genai a single prompt without entering a shell
+- Context Operation: Genai runs under a given context so it knows how to format the response. Change it for a single shell instance or reset the default context to something custom. The default context is [here](https://github.com/Solonce/genai/default_context.txt).
+- Fast & Custom: Genai defaults to a lightweight 100 character response, with a maximum 3 second load time. These are variable with the correct flags if you need longer responses! 
 
 
 ## Built With
 
 [HuggingFace Inference API](https://huggingface.co/docs/api-inference/en/index) - Allow for free AI Inference
 
-[Mixtral-8x7B-Instruct-v0.1](https://huggingface.co/mistralai/Mixtral-8x7B-Instruct-v0.1) - The Model
+[Mixtral-7B-Instruct-v0.2](https://huggingface.co/mistralai/Mixtral-7B-Instruct-v0.2) - The Model
 
 ## Getting Started
 
@@ -72,25 +80,24 @@ Use the following command to enter a shell!
 genai
 ```
 
-## Flags:
+## Flags
 ```
 -t, --text-data      Used to ask a question to genai directly without entering the shell.
 -r, --raw-data       Same as -t without text formatting.
 
--c, --context        Used to set the temporary context genai answers prompt(s) under. Works with shell. (ex. "You are a priate", "You are an angry old man")
+-c, --context        Used to set the temporary context genai answers prompt(s) under. Works with shell. (ex. "You are a pirate", "You are an angry old man")
 -l, --length         Used to set the maximum length of response. Default is 100 characters. Works with shell.
 -s, --seconds        Used to set the maximum time a response will take to generate. Default is 3. Works with shell.
 
--C, --reset-context  Used to set the default context genai answers all prompts under. (ex. "You are a priate", "You are an angry old man")
+-C, --reset-context  Used to set the default context genai answers all prompts under. (ex. "You are a pirate", "You are an angry old man")
 -S, --set-key        Used to set the HuggingFace Inference API key needed for genai to operate.
 ```
 
 
-## Example Usage:
+## Examples
 ### Entering a shell
-The main useage of genai is to enter a shell that you can communicate with an AI Agent.
+The main usage of genai is to enter a shell that you can communicate with an AI Agent.
 
-$${\color{red}Red}$$
 ```
 >genai
                                                      
@@ -124,7 +131,7 @@ genai> exit
 ```
 
 ### Entering a shell with custom --length and --seconds
-This is to demonstrate you can make large AI inference requests, even though this way built as a lightweight tool.
+This is to demonstrate you can make large AI inference requests, even though this was built as a lightweight tool.
 ```
 >genai -l 500 -s 15
                                                      
@@ -220,7 +227,7 @@ array.reverse()
 ### One liner inference with temporary context included
 This is one line text inference, but supplying context for the agent.
 ```
->genai --text-data "How was your day?" --context "You a bitter and angry old man, your response to to the following should be given in such a way. "
+>genai --text-data "How was your day?" --context "You a bitter and angry old man, your response to the following should be given in such a way. "
 
    genai:
  ┌─────────────────────────────
@@ -231,12 +238,15 @@ This is one line text inference, but supplying context for the agent.
  └─────────────────────────────
 ```
 
-
-
+## Limitations
+- This project was never intended for a 'catch-all' or to be used as a perfect AI assistant. The goal was to simply create a command line AI assistant tool.
+- The [Mixtral-7B-Instruct-v0.2](https://huggingface.co/mistralai/Mixtral-7B-Instruct-v0.2) model is open source, and such is variable to change and unpredictability.
+- The [Mixtral-7B-Instruct-v0.2](https://huggingface.co/mistralai/Mixtral-7B-Instruct-v0.2) model tends to have an issue generating one response. It will often respond back as a user to prompt the model again.
+- The line 'After you have finished answering the question, please type TERMINATE.' is used in the default prompt, but not enforced with the -c or -C flags. This line can be important if you want nice text formatting.
 
 ## Contributing
 
-Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 * If you have suggestions for adding or removing projects, feel free to [open an issue](https://github.com/Solonce/genai/issues/new) to discuss it, or directly create a pull request after you edit the *README.md* file with necessary changes.
 * Please make sure you check your spelling and grammar.
 * Create individual PR for each suggestion.
