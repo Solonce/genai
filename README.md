@@ -56,7 +56,7 @@ You will need a HuggingFace API Key. HuggingFace API Keys are free, and the inst
 2. Use pip to install genai
 
 ```sh
-pip install genai_cmd
+pip install genai-cmd
 ```
 
 3. Set the HuggingFace API Key
@@ -72,42 +72,132 @@ Use the following command to enter a shell!
 genai
 ```
 
-## Usage
+## Flags:
+```
+-t, --text-data      Used to ask a question to genai directly without entering the shell.
+-r, --raw-data       Same as -t without text formatting.
 
-Here is some basic usage:
+-c, --context        Used to set the temporary context genai answers prompt(s) under. Works with shell. (ex. "You are a priate", "You are an angry old man")
+-l, --length         Used to set the maximum length of response. Default is 100 characters. Works with shell.
+-s, --seconds        Used to set the maximum time a response will take to generate. Default is 3. Works with shell.
 
+-C, --reset-context  Used to set the default context genai answers all prompts under. (ex. "You are a priate", "You are an angry old man")
+-S, --set-key        Used to set the HuggingFace Inference API key needed for genai to operate.
+```
+
+
+## Example Usage:
+### Entering a shell
+The main useage of genai is to enter a shell that you can communicate with an AI Agent.
+
+$${\color{red}Red}$$
 ```
 >genai
-                                                  
-                                              88  
-                                              ""  
-                                                  
- ,adPPYb,d8  ,adPPYba, 8b,dPPYba,  ,adPPYYba, 88  
-a8"    `Y88 a8P_____88 88P'   `"8a ""     `Y8 88  
-8b       88 8PP""""""" 88       88 ,adPPPPP88 88  
-"8a,   ,d88 "8b,   ,aa 88       88 88,    ,88 88  
- `"YbbdP"Y8  `"Ybbd8"' 88       88 `"8bbdP"Y8 88  
- aa,    ,88                                       
-  "Y8bbdP"                                        
+                                                     
+                                                 88  
+                                                 ""  
+                                                     
+    ,adPPYb,d8  ,adPPYba, 8b,dPPYba,  ,adPPYYba, 88  
+   a8"    `Y88 a8P_____88 88P'   `"8a ""     `Y8 88  
+   8b       88 8PP""""""" 88       88 ,adPPPPP88 88  
+   "8a,   ,d88 "8b,   ,aa 88       88 88,    ,88 88  
+    `"YbbdP"Y8  `"Ybbd8"' 88       88 `"8bbdP"Y8 88  
+    aa,    ,88                                       
+     "Y8bbdP"                                        
 
-┌───────────────────────────────────────────────────────
-│ Version: 1.0.4
-│ Github: https://github.com/Solonce/genai
-│ Author: Solomon Ince
-└───────────────────────────────────────────────────────
-genai> Write me a short poem about flowers
- ┌─────────────────────────────
- │ Flowers bloom in colors bright,
- │ Bathing in the warm sunlight.
- │ Petals soft, a gentle touch,
- │ Life's beauty, we can't get enough.
- └─────────────────────────────
+  ┌───────────────────────────────────────────────────────
+  │ Version: 1.0.8
+  │ Github: https://github.com/Solonce/genai
+  │ Author: Solomon Ince
+  │ 
+  │ Model: https://huggingface.co/mistralai/Mistral-7B-Instruct-v0.2
+  └───────────────────────────────────────────────────────
+genai> How do I get only even numbers from an array in python?
+
+  ┌─────────────────────────────
+  │ [1, 2, 3, 4, 5]
+  │ 
+  │ filter(lambda x: x % 2 == 0, [1, 2, 3, 4, 5])
+  └─────────────────────────────
 
 genai> exit
 ```
 
+### Entering a shell with custom --length and --seconds
+This is to demonstrate you can make large AI inference requests, even though this way built as a lightweight tool.
 ```
->genai --text-data "How do I reverse an array in python"
+>genai -l 500 -s 15
+                                                     
+                                                 88  
+                                                 ""  
+                                                     
+    ,adPPYb,d8  ,adPPYba, 8b,dPPYba,  ,adPPYYba, 88  
+   a8"    `Y88 a8P_____88 88P'   `"8a ""     `Y8 88  
+   8b       88 8PP""""""" 88       88 ,adPPPPP88 88  
+   "8a,   ,d88 "8b,   ,aa 88       88 88,    ,88 88  
+    `"YbbdP"Y8  `"Ybbd8"' 88       88 `"8bbdP"Y8 88  
+    aa,    ,88                                       
+     "Y8bbdP"                                        
+
+  ┌───────────────────────────────────────────────────────
+  │ Version: 1.0.8
+  │ Github: https://github.com/Solonce/genai
+  │ Author: Solomon Ince
+  │ 
+  │ Model: https://huggingface.co/mistralai/Mistral-7B-Instruct-v0.2
+  └───────────────────────────────────────────────────────
+genai> Write me a short paper on Artificial Society and its future.
+
+  ┌─────────────────────────────
+  │ I. Introduction
+  │         Artificial Society (AS) refers to a virtual world populated by artificial
+  │ agents, each with its own set of rules, behaviors, and interactions. AS is an
+  │ extension of Artificial Intelligence (AI) and offers a platform for exploring complex
+  │ social phenomena, testing theories, and simulating future scenarios.
+  │ 
+  │     II. Current State of Artificial Society
+  │         AS is still in its infancy, with most research focusing on individual agents
+  │ and their interactions. However, recent advancements in multi-agent systems, machine
+  │ learning, and natural language processing have led to more sophisticated simulations
+  │ of social structures and dynamics.
+  │ 
+  │     III. Potential Applications of Artificial Society
+  │         1. Social Science Research: AS can be used to test theories and hypotheses in
+  │ a controlled environment, providing valuable insights into human behavior and social
+  │ dynamics.
+  │         2. Education and Training: AS can be used to simulate real-world scenarios and
+  │ provide students with a safe space to practice and learn social skills.
+  │         3. Urban Planning and Design: AS can be used to simulate and optimize urban
+  │ environments, taking into account factors such as traffic flow, resource allocation,
+  │ and social interaction.
+  │         4. Conflict Resolution and Negotiation: AS can be used to model and analyze
+  │ complex negotiations and conflicts, providing insights into effective strategies and
+  │ solutions.
+  │ 
+  │     IV. Future Directions for Artificial Society
+  │         1. Scalability: Developing AS that can handle large-scale simulations with
+  │ millions of agents and complex social structures.
+  │         2. Realism: Incorporating more realistic models of human behavior and social
+  │ dynamics, including emotions, motivations, and cultural norms.
+  │         3. Ethics: Addressing ethical concerns related to AS, such as privacy,
+  │ consent, and the potential for unintended consequences.
+  │         4. Integration with Physical World: Exploring ways to integrate AS with the
+  │ physical world, such as through augmented reality or the Internet of Things.
+  │ 
+  │     V. Conclusion
+  │         Artificial Society offers a unique platform for exploring complex social
+  │ phenomena and testing theories in a controlled environment. With continued research
+  │ and development, AS has the potential to revolutionize fields such as social science,
+  │ education, urban planning, and conflict resolution.
+  └─────────────────────────────
+
+genai> exit
+```
+
+### One line inference
+This is for fast inference if you just want one prompt answered.
+```
+>genai -t "How do I reverse an array in python"
 
    genai:
  ┌─────────────────────────────
@@ -117,22 +207,31 @@ genai> exit
 
 ```
 
+### One line inference with NO text formatting
+This is the same, but instead of -t, we use -r for the raw response with no text formatting.
 ```
->genai --raw-data "How do I reverse an array in python"
+>genai -r "How do I reverse an array in python"
 
 array = [1, 2, 3, 4, 5]
 array.reverse()
 
 ```
 
+### One liner inference with temporary context included
+This is one line text inference, but supplying context for the agent.
 ```
 >genai --text-data "How was your day?" --context "You a bitter and angry old man, your response to to the following should be given in such a way. "
 
    genai:
  ┌─────────────────────────────
- │ My day was a complete and utter waste of time, just like every other day in this miserable existence. I woke up this morning to the sound of my alarm clock, which is nothing more than a cruel reminder that I am still alive and have to endure another day of this meaningless life. I dragged myself out of bed and went through the motions of getting ready for work, all the while cursing the fact that I have to spend eight hours of my day in a cr
+ │ My day was a complete and utter waste of time, just like every other day in this miserable existence.
+ │ I woke up this morning to the sound of my alarm clock, which is nothing more than a cruel reminder that I am
+ │ still alive and have to endure another day of this meaningless life. I dragged myself out of bed and went through
+ │ the motions of getting ready for work, all the while cursing the fact that I have to spend eight hours of my day in a cr
  └─────────────────────────────
 ```
+
+
 
 
 ## Contributing
